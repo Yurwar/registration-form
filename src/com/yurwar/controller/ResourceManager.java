@@ -4,6 +4,10 @@ import java.util.Enumeration;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
+/**
+ * Manages resources depending on program locale
+ * @author Yurii Matora
+ */
 public enum ResourceManager {
     USER_INTERFACE("resources.languageResources"),
     REGEXP("resources.regexpResources");

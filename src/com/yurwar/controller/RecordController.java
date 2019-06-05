@@ -8,6 +8,11 @@ import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Controls records in notebook by adding them by user.
+ * Checks all users input by regexp.
+ * @author Yurii Matora
+ */
 public class RecordController {
     private Notebook notebook;
     private View view;
@@ -21,6 +26,9 @@ public class RecordController {
         regexpManager = ResourceManager.REGEXP;
     }
 
+    /**
+     * Controller entry point
+     */
     public void processUser() {
         String condition;
         view.printMessage(view.getUIManager().getString(View.MENU_GREETING));
@@ -65,6 +73,10 @@ public class RecordController {
         view.printRecords(notebook.getRecords());
     }
 
+    /**
+     * Change program language to the selected one
+     * @param languageMark Indicate what language to set
+     */
     private void changeLanguage(int languageMark) {
         Locale switchLocale;
         switch (languageMark) {
@@ -98,6 +110,13 @@ public class RecordController {
         }
     }
 
+    /**
+     * Asks user to write string that matched with
+     * regular expression until correct answer
+     * @param regexpString Regular expression string, with
+     *                     which user input is compared
+     * @return Correct string from user
+     */
     private String getFormElementFromUser(String regexpString) {
         Pattern pattern = Pattern.compile(regexpString);
         Matcher matcher;

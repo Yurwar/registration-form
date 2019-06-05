@@ -2,6 +2,10 @@ package com.yurwar.controller;
 
 import java.util.Scanner;
 
+/**
+ * Contains methods to get info from console
+ * @author Yurii Matora
+ */
 public class ConsoleReader {
     private Scanner sc;
 

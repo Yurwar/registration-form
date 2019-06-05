@@ -4,6 +4,11 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Contains records
+ * @see com.yurwar.model.Record
+ * @author Yurii Matora
+ */
 public class Notebook {
     private Set<Record> records;
 

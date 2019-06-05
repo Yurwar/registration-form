@@ -2,6 +2,10 @@ package com.yurwar.model;
 
 import java.util.Objects;
 
+/**
+ * Contains fields that describes person.
+ * @author Yurii Matora
+ */
 public class Record {
     private String lastName;
     private String firstName;
@@ -39,6 +43,9 @@ public class Record {
         return Objects.hash(lastName, firstName, patronymic, nickname, mobilePhone, email);
     }
 
+    /**
+     * @return Table formatted string with class fields.
+     */
     @Override
     public String toString() {
         return String.format("%-30s%-30s%-30s%-35s%-16s%-20s%-50s",
@@ -49,6 +56,10 @@ public class Record {
         return lastName;
     }
 
+    /**
+     * Set last name field and auto change full name field.
+     * @param lastName Set last name field
+     */
     public void setLastName(String lastName) {
         this.lastName = lastName;
         this.fullName = lastName + " " + firstName.charAt(0) + '.';
@@ -58,6 +69,10 @@ public class Record {
         return firstName;
     }
 
+    /**
+     * Set first name field and auto change full name field.
+     * @param firstName Set first name field
+     */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
         this.fullName = lastName + " " + firstName.charAt(0) + '.';

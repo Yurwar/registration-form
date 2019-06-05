@@ -5,6 +5,10 @@ import com.yurwar.model.Record;
 
 import java.util.Set;
 
+/**
+ * Contains methods to interact with user by messages
+ * @author Yurii Matora
+ */
 public class View {
     private ResourceManager UIManager;
 
@@ -34,14 +38,23 @@ public class View {
     }
 
 
+    /**
+     * Print message with break line
+     */
     public void printMessage(String message) {
         System.out.println(message);
     }
 
+    /**
+     * @param requestField Requested field from user
+     */
     public void printRequestInput(String requestField) {
         System.out.println(UIManager.getString(View.INPUT_REQUEST) + " " + requestField);
     }
 
+    /**
+     * Print all records in table view
+     */
     public void printRecords(Set<Record> records) {
         StringBuffer recordsString = new StringBuffer();
         recordsString.append(String.format("%-30s%-30s%-30s%-35s%-16s%-20s%-50s%n",
