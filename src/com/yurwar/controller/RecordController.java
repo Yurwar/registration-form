@@ -94,6 +94,7 @@ public class RecordController {
                 break;
             }
             default:
+                view.printMessage(view.getUIManager().getString(View.MENU_LANGUAGE_DEFAULT));
         }
     }
 
@@ -103,7 +104,7 @@ public class RecordController {
         while (true) {
             String userInput = reader.readLine();
             matcher = pattern.matcher(userInput);
-            if(matcher.find()) {
+            if(matcher.matches()) {
                 return matcher.group();
             } else {
                 view.printMessage(view.getUIManager().getString(View.INPUT_INCORRECT));
