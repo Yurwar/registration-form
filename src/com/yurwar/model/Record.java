@@ -41,7 +41,7 @@ public class Record {
 
     @Override
     public String toString() {
-        return String.format("%-30s%-30s%-30s%-35s%-16s%-15s%-50s",
+        return String.format("%-30s%-30s%-30s%-35s%-16s%-20s%-50s",
                 lastName, firstName, patronymic, fullName, nickname, mobilePhone, email);
     }
 

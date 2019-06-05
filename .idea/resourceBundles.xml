@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ResourceBundleManager">
+    <file url="file://$PROJECT_DIR$/src/resources/languageResources.properties" />
+    <file url="file://$PROJECT_DIR$/src/resources/languageResources_en.properties" />
+    <file url="file://$PROJECT_DIR$/src/resources/languageResources_ru.properties" />
+    <file url="file://$PROJECT_DIR$/src/resources/languageResources_ua.properties" />
+    <file url="file://$PROJECT_DIR$/src/resources/regexpResources.properties" />
+    <file url="file://$PROJECT_DIR$/src/resources/regexpResources_en.properties" />
+    <file url="file://$PROJECT_DIR$/src/resources/regexpResources_ru.properties" />
+    <file url="file://$PROJECT_DIR$/src/resources/regexpResources_ua.properties" />
+    <custom-resource-bundle>
+      <file value="file://$PROJECT_DIR$/src/resources/languageResources.properties" />
+      <file value="file://$PROJECT_DIR$/src/resources/languageResources_en.properties" />
+      <file value="file://$PROJECT_DIR$/src/resources/languageResources_ru.properties" />
+      <file value="file://$PROJECT_DIR$/src/resources/languageResources_ua.properties" />
+      <base-name>languageResources</base-name>
+    </custom-resource-bundle>
+    <custom-resource-bundle>
+      <file value="file://$PROJECT_DIR$/src/resources/regexpResources.properties" />
+      <file value="file://$PROJECT_DIR$/src/resources/regexpResources_en.properties" />
+      <file value="file://$PROJECT_DIR$/src/resources/regexpResources_ru.properties" />
+      <file value="file://$PROJECT_DIR$/src/resources/regexpResources_ua.properties" />
+      <base-name>regexpResources</base-name>
+    </custom-resource-bundle>
+  </component>
+</project>
