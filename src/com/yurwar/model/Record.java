@@ -10,7 +10,6 @@ public class Record {
     private String lastName;
     private String firstName;
     private String patronymic;
-    private String fullName;
     private String nickname;
     private String mobilePhone;
     private String email;
@@ -22,8 +21,9 @@ public class Record {
         this.nickname = nickname;
         this.mobilePhone = mobilePhone;
         this.email = email;
-        this.fullName = lastName + " " + firstName.charAt(0) + '.';
     }
+
+    public Record() {}
 
     @Override
     public boolean equals(Object o) {
@@ -48,34 +48,24 @@ public class Record {
      */
     @Override
     public String toString() {
-        return String.format("%-30s%-30s%-30s%-35s%-16s%-20s%-50s",
-                lastName, firstName, patronymic, fullName, nickname, mobilePhone, email);
+        return String.format("%-30s%-30s%-30s%-16s%-20s%-50s",
+                lastName, firstName, patronymic, nickname, mobilePhone, email);
     }
 
     public String getLastName() {
         return lastName;
     }
 
-    /**
-     * Set last name field and auto change full name field.
-     * @param lastName Set last name field
-     */
     public void setLastName(String lastName) {
         this.lastName = lastName;
-        this.fullName = lastName + " " + firstName.charAt(0) + '.';
     }
 
     public String getFirstName() {
         return firstName;
     }
 
-    /**
-     * Set first name field and auto change full name field.
-     * @param firstName Set first name field
-     */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
-        this.fullName = lastName + " " + firstName.charAt(0) + '.';
     }
 
     public String getPatronymic() {

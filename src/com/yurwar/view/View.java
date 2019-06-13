@@ -15,7 +15,6 @@ public class View {
     public static final String LAST_NAME = "lastName";
     public static final String FIRST_NAME = "firstName";
     public static final String PATRONYMIC = "patronymic";
-    public static final String FULL_NAME = "fullName";
     public static final String EMAIL = "email";
     public static final String NICKNAME = "nickname";
     public static final String MOBILE_PHONE = "mobilePhone";
@@ -57,11 +56,10 @@ public class View {
      */
     public void printRecords(Set<Record> records) {
         StringBuffer recordsString = new StringBuffer();
-        recordsString.append(String.format("%-30s%-30s%-30s%-35s%-16s%-20s%-50s%n",
+        recordsString.append(String.format("%-30s%-30s%-30s%-16s%-20s%-50s%n",
                 UIManager.getString(View.LAST_NAME).toUpperCase(),
                 UIManager.getString(View.FIRST_NAME).toUpperCase(),
                 UIManager.getString(View.PATRONYMIC).toUpperCase(),
-                UIManager.getString(View.FULL_NAME).toUpperCase(),
                 UIManager.getString(View.NICKNAME).toUpperCase(),
                 UIManager.getString(View.MOBILE_PHONE).toUpperCase(),
                 UIManager.getString(View.EMAIL).toUpperCase()
