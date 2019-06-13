@@ -1,5 +1,6 @@
 package com.yurwar.controller;
 
+import com.yurwar.model.LoginNotUniqueException;
 import com.yurwar.model.Notebook;
 import com.yurwar.model.Record;
 import com.yurwar.view.View;
@@ -65,7 +66,17 @@ public class RecordController {
             String email = getFormElementFromUser(regexpManager.getString(View.EMAIL_REGEXP));
             record.setEmail(email);
 
-            notebook.addRecord(record);
+            while (true) {
+                try {
+                    notebook.addRecord(record);
+                    break;
+                } catch (LoginNotUniqueException e) {
+                    view.printMessage(e.getLogin() + ": " + view.getUIManager().getString(View.LOGIN_NOT_UNIQUE));
+                    view.printRequestInput(view.getUIManager().getString(View.LOGIN));
+                    login = getFormElementFromUser(regexpManager.getString(View.LOGIN_REGEXP));
+                    record.setLogin(login);
+                }
+            }
             view.printMessage(view.getUIManager().getString(View.CONTINUE_REQUEST));
             condition = reader.readLine();
         } while (condition.equalsIgnoreCase(view.getUIManager().getString(View.CONTINUE_CONDITION)));

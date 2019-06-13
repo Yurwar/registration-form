@@ -25,6 +25,7 @@ public class View {
     public static final String MENU_LANGUAGE = "menu.language";
     public static final String MENU_LANGUAGE_DEFAULT = "menu.language.default";
     public static final String MENU_GREETING = "menu.greeting";
+    public static final String LOGIN_NOT_UNIQUE = "unique.login";
 
     public static final String EMAIL_REGEXP = "regexp.email";
     public static final String NAME_REGEXP = "regexp.name";

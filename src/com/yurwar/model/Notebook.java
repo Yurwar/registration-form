@@ -24,7 +24,8 @@ public class Notebook {
         this.records = records;
     }
 
-    public void addRecord(Record record) {
+    public void addRecord(Record record) throws LoginNotUniqueException {
+        checkLoginUnique(record.getLogin());
         records.add(record);
     }
 
@@ -34,5 +35,13 @@ public class Notebook {
 
     public void setRecords(Set<Record> records) {
         this.records = records;
+    }
+
+    private void checkLoginUnique(String login) throws LoginNotUniqueException {
+        for (Record record : records) {
+            if (record.getLogin().equals(login)) {
+                throw new LoginNotUniqueException(login);
+            }
+        }
     }
 }
