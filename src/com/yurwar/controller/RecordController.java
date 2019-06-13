@@ -65,7 +65,7 @@ public class RecordController {
             String email = getFormElementFromUser(regexpManager.getString(View.EMAIL_REGEXP));
             record.setEmail(email);
 
-            notebook.getRecords().add(record);
+            notebook.addRecord(record);
             view.printMessage(view.getUIManager().getString(View.CONTINUE_REQUEST));
             condition = reader.readLine();
         } while (condition.equalsIgnoreCase(view.getUIManager().getString(View.CONTINUE_CONDITION)));

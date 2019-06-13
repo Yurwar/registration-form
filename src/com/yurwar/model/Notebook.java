@@ -24,6 +24,10 @@ public class Notebook {
         this.records = records;
     }
 
+    public void addRecord(Record record) {
+        records.add(record);
+    }
+
     public Set<Record> getRecords() {
         return records;
     }
