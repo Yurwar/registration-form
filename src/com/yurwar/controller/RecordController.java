@@ -39,34 +39,33 @@ public class RecordController {
             view.printMessage(view.getUIManager().getString(View.MENU_LANGUAGE_DEFAULT));
         }
         do {
+            Record record = new Record();
+
             view.printRequestInput(view.getUIManager().getString(View.LAST_NAME));
             String lastName = getFormElementFromUser(regexpManager.getString(View.NAME_REGEXP));
+            record.setLastName(lastName);
 
             view.printRequestInput(view.getUIManager().getString(View.FIRST_NAME));
             String firstName = getFormElementFromUser(regexpManager.getString(View.NAME_REGEXP));
+            record.setFirstName(firstName);
 
             view.printRequestInput(view.getUIManager().getString(View.PATRONYMIC));
             String patronymic = getFormElementFromUser(regexpManager.getString(View.NAME_REGEXP));
+            record.setPatronymic(patronymic);
 
             view.printRequestInput(view.getUIManager().getString(View.NICKNAME));
             String nickname = getFormElementFromUser(regexpManager.getString(View.NICKNAME_REGEXP));
+            record.setNickname(nickname);
 
             view.printRequestInput(view.getUIManager().getString(View.MOBILE_PHONE));
             String mobilePhone = getFormElementFromUser(regexpManager.getString(View.MOBILE_PHONE_REGEXP));
+            record.setMobilePhone(mobilePhone);
 
             view.printRequestInput(view.getUIManager().getString(View.EMAIL));
             String email = getFormElementFromUser(regexpManager.getString(View.EMAIL_REGEXP));
+            record.setEmail(email);
 
-            notebook.getRecords().add(
-                    new Record(
-                            lastName,
-                            firstName,
-                            patronymic,
-                            nickname,
-                            mobilePhone,
-                            email
-                    )
-            );
+            notebook.getRecords().add(record);
             view.printMessage(view.getUIManager().getString(View.CONTINUE_REQUEST));
             condition = reader.readLine();
         } while (condition.equalsIgnoreCase(view.getUIManager().getString(View.CONTINUE_CONDITION)));
