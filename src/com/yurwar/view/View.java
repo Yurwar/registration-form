@@ -16,7 +16,7 @@ public class View {
     public static final String FIRST_NAME = "firstName";
     public static final String PATRONYMIC = "patronymic";
     public static final String EMAIL = "email";
-    public static final String NICKNAME = "nickname";
+    public static final String LOGIN = "login";
     public static final String MOBILE_PHONE = "mobilePhone";
     public static final String CONTINUE_REQUEST = "continue.request";
     public static final String CONTINUE_CONDITION = "continue.condition";
@@ -28,7 +28,7 @@ public class View {
 
     public static final String EMAIL_REGEXP = "regexp.email";
     public static final String NAME_REGEXP = "regexp.name";
-    public static final String NICKNAME_REGEXP = "regexp.nickname";
+    public static final String LOGIN_REGEXP = "regexp.login";
     public static final String MOBILE_PHONE_REGEXP = "regexp.mobilePhone";
 
 
@@ -60,7 +60,7 @@ public class View {
                 UIManager.getString(View.LAST_NAME).toUpperCase(),
                 UIManager.getString(View.FIRST_NAME).toUpperCase(),
                 UIManager.getString(View.PATRONYMIC).toUpperCase(),
-                UIManager.getString(View.NICKNAME).toUpperCase(),
+                UIManager.getString(View.LOGIN).toUpperCase(),
                 UIManager.getString(View.MOBILE_PHONE).toUpperCase(),
                 UIManager.getString(View.EMAIL).toUpperCase()
                 )

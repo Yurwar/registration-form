@@ -53,9 +53,9 @@ public class RecordController {
             String patronymic = getFormElementFromUser(regexpManager.getString(View.NAME_REGEXP));
             record.setPatronymic(patronymic);
 
-            view.printRequestInput(view.getUIManager().getString(View.NICKNAME));
-            String nickname = getFormElementFromUser(regexpManager.getString(View.NICKNAME_REGEXP));
-            record.setNickname(nickname);
+            view.printRequestInput(view.getUIManager().getString(View.LOGIN));
+            String login = getFormElementFromUser(regexpManager.getString(View.LOGIN_REGEXP));
+            record.setLogin(login);
 
             view.printRequestInput(view.getUIManager().getString(View.MOBILE_PHONE));
             String mobilePhone = getFormElementFromUser(regexpManager.getString(View.MOBILE_PHONE_REGEXP));

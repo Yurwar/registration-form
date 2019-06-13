@@ -10,15 +10,15 @@ public class Record {
     private String lastName;
     private String firstName;
     private String patronymic;
-    private String nickname;
+    private String login;
     private String mobilePhone;
     private String email;
 
-    public Record(String lastName, String firstName, String patronymic, String nickname, String mobilePhone, String email) {
+    public Record(String lastName, String firstName, String patronymic, String login, String mobilePhone, String email) {
         this.lastName = lastName;
         this.firstName = firstName;
         this.patronymic = patronymic;
-        this.nickname = nickname;
+        this.login = login;
         this.mobilePhone = mobilePhone;
         this.email = email;
     }
@@ -33,14 +33,14 @@ public class Record {
         return lastName.equals(record.lastName) &&
                 firstName.equals(record.firstName) &&
                 patronymic.equals(record.patronymic) &&
-                nickname.equals(record.nickname) &&
+                login.equals(record.login) &&
                 mobilePhone.equals(record.mobilePhone) &&
                 email.equals(record.email);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(lastName, firstName, patronymic, nickname, mobilePhone, email);
+        return Objects.hash(lastName, firstName, patronymic, login, mobilePhone, email);
     }
 
     /**
@@ -49,7 +49,7 @@ public class Record {
     @Override
     public String toString() {
         return String.format("%-30s%-30s%-30s%-16s%-20s%-50s",
-                lastName, firstName, patronymic, nickname, mobilePhone, email);
+                lastName, firstName, patronymic, login, mobilePhone, email);
     }
 
     public String getLastName() {
@@ -76,12 +76,12 @@ public class Record {
         this.patronymic = patronymic;
     }
 
-    public String getNickname() {
-        return nickname;
+    public String getLogin() {
+        return login;
     }
 
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
     public String getMobilePhone() {
