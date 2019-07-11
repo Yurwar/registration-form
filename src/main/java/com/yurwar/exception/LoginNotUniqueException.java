@@ -12,6 +12,11 @@ public class LoginNotUniqueException extends Exception {
         this.login = login;
     }
 
+    public LoginNotUniqueException(Throwable cause, String login) {
+        super(cause);
+        this.login = login;
+    }
+
     public String getLogin() {
         return login;
     }

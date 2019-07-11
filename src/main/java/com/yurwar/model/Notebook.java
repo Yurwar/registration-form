@@ -18,7 +18,11 @@ public class Notebook {
     private RecordDao recordDao = JDBCDaoFactory.getInstance().createRecordDao();
 
     public void addRecord(Record record) throws LoginNotUniqueException {
-        recordDao.create(record);
+        try {
+            recordDao.create(record);
+        } catch (RuntimeException e) {
+            throw new LoginNotUniqueException(e, record.getLogin());
+        }
     }
 
     public List<Record> getRecords() {
