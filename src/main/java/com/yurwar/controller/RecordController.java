@@ -1,6 +1,6 @@
 package com.yurwar.controller;
 
-import com.yurwar.model.LoginNotUniqueException;
+import com.yurwar.exception.LoginNotUniqueException;
 import com.yurwar.model.Notebook;
 import com.yurwar.model.Record;
 import com.yurwar.view.View;

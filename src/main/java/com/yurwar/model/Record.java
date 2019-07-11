@@ -7,6 +7,7 @@ import java.util.Objects;
  * @author Yurii Matora
  */
 public class Record {
+    private int id;
     private String lastName;
     private String firstName;
     private String patronymic;
@@ -14,7 +15,8 @@ public class Record {
     private String mobilePhone;
     private String email;
 
-    public Record(String lastName, String firstName, String patronymic, String login, String mobilePhone, String email) {
+    public Record(int id, String lastName, String firstName, String patronymic, String login, String mobilePhone, String email) {
+        this.id = id;
         this.lastName = lastName;
         this.firstName = firstName;
         this.patronymic = patronymic;
@@ -50,6 +52,14 @@ public class Record {
     public String toString() {
         return String.format("%-30s%-30s%-30s%-16s%-20s%-50s",
                 lastName, firstName, patronymic, login, mobilePhone, email);
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getLastName() {

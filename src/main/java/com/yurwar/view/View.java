@@ -3,6 +3,7 @@ package com.yurwar.view;
 import com.yurwar.controller.ResourceManager;
 import com.yurwar.model.Record;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -54,8 +55,9 @@ public class View {
 
     /**
      * Print all records in table view
+     * @param records
      */
-    public void printRecords(Set<Record> records) {
+    public void printRecords(List<Record> records) {
         StringBuffer recordsString = new StringBuffer();
         recordsString.append(String.format("%-30s%-30s%-30s%-16s%-20s%-50s%n",
                 UIManager.getString(View.LAST_NAME).toUpperCase(),
